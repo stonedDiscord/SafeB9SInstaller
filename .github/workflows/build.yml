@@ -13,6 +13,10 @@ jobs:
       with:
         submodules: recursive
 
+    - name: Install firmtool
+      run: |
+        sudo pip install -U git+https://github.com/TuxSH/firmtool.git
+
     - name: Build
       run: |
         make -j2
