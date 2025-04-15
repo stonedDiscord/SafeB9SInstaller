@@ -13,6 +13,11 @@ jobs:
       with:
         submodules: recursive
 
+    - name: Install pip
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: python3-pip
+
     - name: Install firmtool
       run: |
         sudo pip install -U git+https://github.com/TuxSH/firmtool.git
